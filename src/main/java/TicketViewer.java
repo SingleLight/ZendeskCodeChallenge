@@ -143,6 +143,11 @@ public class TicketViewer {
     tickerRequester.userInteraction(System.in);
   }
 
+  /**
+   * get the ticketList
+   *
+   * @return ArrayList of tickets
+   */
   public ArrayList<Ticket> getTicketList() {
     return ticketList;
   }
