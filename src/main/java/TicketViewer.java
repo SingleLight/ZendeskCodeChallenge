@@ -21,20 +21,16 @@ public class TicketViewer {
   private static final String TOKEN = "TOKEN";
 
   /**
-   * This method connects to the zendesk API using environment variables
+   * This method connects to the zendesk API using environment variables in .env
    *
    * @return the connected Zendesk object
    */
   public Zendesk connect() {
     try {
       Dotenv dotenv = Dotenv.load();
-//      return new Zendesk.Builder(dotenv.get(DOMAIN))
-//          .setUsername(dotenv.get(EMAIL))
-//          .setToken(dotenv.get(TOKEN))
-//          .build();
-      return new Zendesk.Builder(System.getenv(DOMAIN))
-          .setUsername(System.getenv(EMAIL))
-          .setToken(System.getenv(TOKEN))
+      return new Zendesk.Builder(dotenv.get(DOMAIN))
+          .setUsername(dotenv.get(EMAIL))
+          .setToken(dotenv.get(TOKEN))
           .build();
     } catch (ZendeskResponseException | IllegalArgumentException e) {
       e.printStackTrace();
@@ -43,7 +39,7 @@ public class TicketViewer {
   }
 
   /**
-   * this method process the Zendesk Object and stores all the tickets in an ArrayList
+   * this method processes the Zendesk Object and stores all the tickets in an ArrayList
    *
    * @param zd the Zendesk Object
    */
