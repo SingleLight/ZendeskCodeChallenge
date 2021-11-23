@@ -5,7 +5,7 @@
 This program uses the Zendesk Java Client to interact with the APIs and 
 guides the user to view the tickets in a given domain. The user interface
 is set up in the command line. This program uses gradle to help with build
-and unit testing
+and unit testing as well as dependency injection
 
 ## How to run the program:  
 The best way to run this program is to use IntelliJ IDEA or your IDE of choice to run TicketViewer.
