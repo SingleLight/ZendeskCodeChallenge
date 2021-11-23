@@ -25,6 +25,8 @@ This program uses JUnit to run unit tests. Run the [do All] function in the
 build.gradle script to generate test report, code coverage, as well as javadocs 
 in accessible HTML forms  
 
+Note that you should also supply the IDE with proper environment variables when testing 
+In order for the test to pass, your domain must have six or more tickets  
 
 
 
