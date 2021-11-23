@@ -27,7 +27,10 @@ one method at a time. Run the [do All] function in the build.gradle script to ge
 code coverage, as well as javadocs in accessible HTML forms. Using an IDE like IntelliJ is recommended  
 
 Note that you should also supply the IDE with proper environment variables when testing  
-Additionally, in order for the test to pass, your domain must have six or more tickets  
+Additionally, in order for the test to pass, your domain must have six or more tickets   
+
+You can also build and run the gradlew in the command line. Just remember to set the environment
+variables before you do so
 
 ## Design decisions
 I used the Zendesk Java API Client to avoid re-inventing the wheel.  
