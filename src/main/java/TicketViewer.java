@@ -1,5 +1,6 @@
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 import org.zendesk.client.v2.Zendesk;
 import org.zendesk.client.v2.ZendeskResponseException;
@@ -140,5 +141,33 @@ public class TicketViewer {
     TicketViewer tickerRequester = new TicketViewer();
     tickerRequester.processTickets(tickerRequester.connect());
     tickerRequester.userInteraction(System.in);
+  }
+
+  public ArrayList<Ticket> getTicketList() {
+    return ticketList;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    TicketViewer that = (TicketViewer) o;
+    return ticketList.equals(that.ticketList);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(ticketList);
+  }
+
+  @Override
+  public String toString() {
+    return "TicketViewer{" +
+        "ticketList=" + ticketList +
+        '}';
   }
 }
