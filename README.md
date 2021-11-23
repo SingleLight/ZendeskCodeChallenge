@@ -1,13 +1,13 @@
 # Zendesk Code Challenge
 #### Mingyuan Shan
 
-### Overview: 
+## Overview: 
 This program uses the Zendesk Java Client to interact with the APIs and 
 guides the user to view the tickets in a given domain. The user interface
 is set up in the command line.  
 
-### How to run the program:  
-The best way to run this program is to use IntelliJ IDEA or your IDE of choice.
+## How to run the program:  
+The best way to run this program is to use IntelliJ IDEA or your IDE of choice to run TicketViewer.
 Set up the environment variables of DOMAIN, EMAIL and TOKEN in the application 
 configuration to provide proper authentication.
   
@@ -25,8 +25,8 @@ This program uses JUnit to run unit tests. Run the [do All] function in the
 build.gradle script to generate test report, code coverage, as well as javadocs 
 in accessible HTML forms  
 
-Note that you should also supply the IDE with proper environment variables when testing 
-In order for the test to pass, your domain must have six or more tickets  
+Note that you should also supply the IDE with proper environment variables when testing  
+Additionally, in order for the test to pass, your domain must have six or more tickets  
 
 
 
