@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.zendesk.client.v2.Zendesk;
 import org.zendesk.client.v2.ZendeskResponseException;
 import org.zendesk.client.v2.model.Ticket;
+import io.github.cdimascio.dotenv.Dotenv;
 
 /**
  * TicketRequester class handles the defined need to list tickets from Zendesk API
@@ -26,6 +27,11 @@ public class TicketViewer {
    */
   public Zendesk connect() {
     try {
+      Dotenv dotenv = Dotenv.load();
+//      return new Zendesk.Builder(dotenv.get(DOMAIN))
+//          .setUsername(dotenv.get(EMAIL))
+//          .setToken(dotenv.get(TOKEN))
+//          .build();
       return new Zendesk.Builder(System.getenv(DOMAIN))
           .setUsername(System.getenv(EMAIL))
           .setToken(System.getenv(TOKEN))

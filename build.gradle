@@ -16,6 +16,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation 'com.cloudbees.thirdparty:zendesk-java-client:0.15.0'
+    implementation 'io.github.cdimascio:java-dotenv:5.2.2'
 }
 pmd {
     ignoreFailures = true
